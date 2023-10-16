@@ -1,0 +1,9 @@
+[submodule "footprints.pretty"]
+	path = footprints.pretty
+	url = https://github.com/l4es/kicad_pcb.git
+[submodule "lib_sch"]
+	path = lib_sch
+	url = https://github.com/l4es/kicad_sch.git
+[submodule "3d_models"]
+	path = 3d_models
+	url = https://github.com/l4es/kicad_3d.git
