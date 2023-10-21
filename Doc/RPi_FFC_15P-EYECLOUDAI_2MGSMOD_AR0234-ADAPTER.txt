@@ -1,0 +1,16 @@
+If CSI_GPIO_3V3 is used as RESET of AR0234CS
+- Populate R7, Q1, R8, R10 to propagate the CSI_GPIO_3V3 to CSI_nRST_1V8
+- Populate R6
+- Unpopulate R5, R9, U2, R12, R13, R4, C4 (R4 & C4 can be kept)
+- CSI_PWDN_1V8 is left unconnected.
+
+If CSI_GPIO_3V3 is used as PWDN of AR0234CS
+- Populate R7, Q1, R8, R9 to propagate the CSI_GPIO_3V3 to CSI_PWDN_1V8
+- Populate U2, R12, R13, R4, C4 (optional) to monitor CSI_nRST_1V8 by the availability of 3V3
+- Unpopulate R10
+- if ENABLE is connected to CSI_GPIO_3V3 ; 
+	+ Populate R3
+
+
+
+
