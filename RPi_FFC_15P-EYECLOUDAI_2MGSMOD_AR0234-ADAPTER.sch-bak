@@ -490,10 +490,10 @@ Wire Wire Line
 	5695 6030 5695 6075
 Connection ~ 4375 6825
 $Comp
-L Device:C C4
+L Device:C C6
 U 1 1 65241586
 P 6965 5350
-F 0 "C4" H 7080 5396 50  0000 L CNN
+F 0 "C6" H 7080 5396 50  0000 L CNN
 F 1 "10uF" H 7080 5305 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7003 5200 50  0001 C CNN
 F 3 "~" H 6965 5350 50  0001 C CNN
@@ -514,17 +514,6 @@ $EndComp
 Wire Wire Line
 	6965 5500 6965 5610
 $Comp
-L Device:R_US R3
-U 1 1 6525784F
-P 2505 2005
-F 0 "R3" V 2300 2005 50  0000 C CNN
-F 1 "0" V 2391 2005 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2545 1995 50  0001 C CNN
-F 3 "~" H 2505 2005 50  0001 C CNN
-	1    2505 2005
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R_US R1
 U 1 1 6525D200
 P 5145 6375
@@ -533,17 +522,6 @@ F 1 "10K" V 5031 6375 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5185 6365 50  0001 C CNN
 F 3 "~" H 5145 6375 50  0001 C CNN
 	1    5145 6375
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_US R2
-U 1 1 652653E6
-P 6765 6375
-F 0 "R2" V 6560 6375 50  0000 C CNN
-F 1 "22" V 6651 6375 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6805 6365 50  0001 C CNN
-F 3 "~" H 6765 6375 50  0001 C CNN
-	1    6765 6375
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -555,8 +533,6 @@ Wire Wire Line
 	4850 6030 5695 6030
 Text Label 7450 6375 2    50   ~ 0
 CSI_MCLK_1V8
-Wire Wire Line
-	6915 6375 7515 6375
 Wire Wire Line
 	1815 2105 2500 2105
 Wire Wire Line
@@ -831,8 +807,6 @@ Wire Wire Line
 	1815 2305 2865 2305
 Text Label 1850 2005 0    50   ~ 0
 MCLK_JETSON
-Text Label 6155 6375 0    50   ~ 0
-MCLK_OSC
 Wire Wire Line
 	4095 6030 4375 6030
 Wire Wire Line
@@ -842,8 +816,6 @@ Wire Wire Line
 	5695 6675 5695 6825
 Wire Wire Line
 	5695 6825 4375 6825
-Wire Wire Line
-	5995 6375 6615 6375
 $Comp
 L Device:R_US R5
 U 1 1 654CC6F1
@@ -950,7 +922,7 @@ Wire Wire Line
 	5420 2715 5615 2715
 Connection ~ 5420 2715
 Wire Wire Line
-	5915 2715 6890 2715
+	5915 2715 6135 2715
 $Comp
 L Device:R_US R9
 U 1 1 6553D3E3
@@ -970,4 +942,58 @@ Wire Wire Line
 	5420 3065 5420 2715
 Text Label 6845 3065 2    50   ~ 0
 CSI_nRST_1V8
+$Comp
+L Device:R_US R2
+U 1 1 655895EC
+P 6135 2455
+F 0 "R2" V 5930 2455 50  0000 C CNN
+F 1 "10K" V 6021 2455 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6175 2445 50  0001 C CNN
+F 3 "~" H 6135 2455 50  0001 C CNN
+	1    6135 2455
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6135 2305 6135 2165
+Wire Wire Line
+	6135 2165 5420 2165
+Wire Wire Line
+	6135 2605 6135 2715
+Connection ~ 6135 2715
+Wire Wire Line
+	6135 2715 6890 2715
+$Comp
+L Device:C C4
+U 1 1 66B9F662
+P 6400 6585
+F 0 "C4" H 6515 6631 50  0000 L CNN
+F 1 "15pF" H 6515 6540 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6438 6435 50  0001 C CNN
+F 3 "~" H 6400 6585 50  0001 C CNN
+	1    6400 6585
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 6435 6400 6375
+Wire Wire Line
+	5995 6375 6400 6375
+Connection ~ 6400 6375
+Wire Wire Line
+	6400 6375 7515 6375
+Wire Wire Line
+	5695 6825 6400 6825
+Wire Wire Line
+	6400 6825 6400 6735
+Connection ~ 5695 6825
+$Comp
+L Device:R_US R3
+U 1 1 6525784F
+P 2505 2005
+F 0 "R3" V 2300 2005 50  0000 C CNN
+F 1 "0" V 2391 2005 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2545 1995 50  0001 C CNN
+F 3 "~" H 2505 2005 50  0001 C CNN
+	1    2505 2005
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
